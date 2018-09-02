@@ -54,7 +54,7 @@ Election Results
 Total Votes: {total_votes}
 ---------------------""")
     target.write("\n")
-    target.write("\n".join(results))
+    target.write("\n".join(results)) #this format replaces list comma delimiter with new line
     target.write(f"""
 ---------------------
 Winner: {winner}
