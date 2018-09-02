@@ -52,16 +52,6 @@ month_dec = months[great_decrease_mo]
 # calculate average change
 avg_change = round(sum(change) / len(change))
 
-print(f"""
-Financial Analysis
---------------------------------
-Total Months: {total_months}
-Total: ${total_revenue}
-Average Change: ${avg_change}
-Greatest Increase in Profits: {month_inc} (${great_increase})
-Greatest Decrease in Profits: {month_dec} (${great_decrease})
-""")
-
 # file path for output
 output = os.path.join("Output/analysis.txt")
 
@@ -76,6 +66,11 @@ Average Change: ${avg_change}
 Greatest Increase in Profits: {month_inc} (${great_increase})
 Greatest Decrease in Profits: {month_dec} (${great_decrease})
 """)
+
+#open, read and print text file to terminal
+with open(output, "r") as target:
+    print(target.read())
+
 # close text file
 target.close()
 # close csv file
