@@ -23,8 +23,8 @@ with open(csvpath, newline="") as csvdata:
 
 total_votes = len(candidates)
 
-# create a set for a unique list of candidates
-canset = {*candidates}
+# create a set for a unique list of candidates, sorted by candidate count, descending - this will display candidates highest to lowest vote counts
+canset = sorted({*candidates}, key=candidates.count, reverse=True)
 
 # create empty list for loop results - will hold: (can) (can_percent) (can_votes) for each candidate
 results = []
